@@ -18,6 +18,7 @@
 
 # How to convert
 ```
+python3 -m venv venv
 source venv/bin/activate
 python3 convert_html_to_text.py
 ```
