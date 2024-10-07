@@ -37,19 +37,17 @@
                             </tr>
                             <tr>
                                 <td style="padding:0 35px;">
-                                    <h1
-                                            style="color:#1e1e2d; font-weight:500; margin:0;font-size:32px;font-family:'Rubik',sans-serif;">
+                                    <h1 style="color:#1e1e2d; font-weight:500; margin:0;font-size:28px;font-family:'Rubik',sans-serif;">
                                         You have
                                         requested to verify code</h1>
                                     <span id="codeSpan" style="display:inline-block;
                                         vertical-align:middle;
                                         margin:29px 0 26px;
                                         font-family: Arial, Helvetica, sans-serif;
-                                        font-size: 30px;
+                                        font-size: 28px;
                                         letter-spacing: 3px;
                                         border-bottom:1px solid #cecece;
-                                        width:100px;"
-                                        onclick="copyToClipboard()">{{.Code}}</span>
+                                        width:100px;">{{.Code}}</span>
                                     <p style="color:#455056; font-size:15px;line-height:24px; margin:0;">
                                         This is your verification code. Please don't share this code with anyone.
                                     </p>
@@ -77,22 +75,5 @@
         </td>
     </tr>
 </table>
-
-
 </body>
-<script>
-    function copyToClipboard() {
-        var codeSpan = document.getElementById("codeSpan");
-        var textToCopy = codeSpan.textContent || codeSpan.innerText;
-    
-        var tempTextarea = document.createElement("textarea");
-        tempTextarea.value = textToCopy;
-        document.body.appendChild(tempTextarea);
-        tempTextarea.select();
-        document.execCommand("copy");
-        document.body.removeChild(tempTextarea);
-    
-        alert("Copied to clipboard: " + textToCopy);
-    }
-    </script>
 </html>
